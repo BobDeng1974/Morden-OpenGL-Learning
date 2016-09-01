@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -71,6 +71,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)\Intermediates\</IntDir>
+    <IncludePath>$(SolutionDir)source\common\thirdparty\glfw\include;$(SolutionDir)source\common\thirdparty\glew\include;$(SolutionDir)source\common\thirdparty\glm;$(SolutionDir)source\common\thirdparty\stb_image;$(SolutionDir)source\common;$(ProjectDir)source\tdogl;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)platforms\windows;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -87,12 +91,14 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;legacy_stdio_definitions.lib;kernel32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -151,10 +157,27 @@
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="tdogl\Bitmap.h" />
+    <ClInclude Include="tdogl\Program.h" />
+    <ClInclude Include="tdogl\Shader.h" />
+    <ClInclude Include="tdogl\Texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\platforms\windows\platform_windows.cpp" />
+    <ClCompile Include="..\source\common\thirdparty\glew\src\glew.c" />
     <ClCompile Include="02_textures_learning.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="tdogl\Bitmap.cpp" />
+    <ClCompile Include="tdogl\Program.cpp" />
+    <ClCompile Include="tdogl\Shader.cpp" />
+    <ClCompile Include="tdogl\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.shader" />
+    <None Include="vertex.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\source\02_textures\resources\hazard.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

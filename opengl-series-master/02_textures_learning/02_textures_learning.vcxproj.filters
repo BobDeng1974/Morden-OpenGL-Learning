@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\tdogl">
+      <UniqueIdentifier>{8a3800dd-e12a-446e-b20f-1b0e355be789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{2cac32e5-7de3-4cd2-9fb9-bf877626d7a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,6 +30,18 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="tdogl\Bitmap.h">
+      <Filter>源文件\tdogl</Filter>
+    </ClInclude>
+    <ClInclude Include="tdogl\Program.h">
+      <Filter>源文件\tdogl</Filter>
+    </ClInclude>
+    <ClInclude Include="tdogl\Shader.h">
+      <Filter>源文件\tdogl</Filter>
+    </ClInclude>
+    <ClInclude Include="tdogl\Texture.h">
+      <Filter>源文件\tdogl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -32,5 +50,36 @@
     <ClCompile Include="02_textures_learning.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="tdogl\Bitmap.cpp">
+      <Filter>源文件\tdogl</Filter>
+    </ClCompile>
+    <ClCompile Include="tdogl\Program.cpp">
+      <Filter>源文件\tdogl</Filter>
+    </ClCompile>
+    <ClCompile Include="tdogl\Shader.cpp">
+      <Filter>源文件\tdogl</Filter>
+    </ClCompile>
+    <ClCompile Include="tdogl\Texture.cpp">
+      <Filter>源文件\tdogl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\platforms\windows\platform_windows.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\source\common\thirdparty\glew\src\glew.c">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fragment.shader">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="vertex.shader">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\source\02_textures\resources\hazard.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>
