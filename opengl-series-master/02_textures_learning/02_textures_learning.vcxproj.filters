@@ -78,7 +78,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\source\02_textures\resources\hazard.png">
+    <Image Include="resources\hazard.png">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>

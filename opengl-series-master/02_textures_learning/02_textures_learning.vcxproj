@@ -100,6 +100,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>glfw3.lib;opengl32.lib;legacy_stdio_definitions.lib;kernel32.lib;user32.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command> copy "$(ProjectDir)resources\*" "$(OutDir)\"</Command>
+      <Message>Copies resources into same directory as built executable</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -177,7 +181,7 @@
     <None Include="vertex.shader" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\source\02_textures\resources\hazard.png" />
+    <Image Include="resources\hazard.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
