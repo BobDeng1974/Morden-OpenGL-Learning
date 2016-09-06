@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_even_more_lighting", "pl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_textures_learning", "02_textures_learning\02_textures_learning.vcxproj", "{B5C87CAA-D391-47E6-B2E2-E7C5E15F0B71}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_matrices_learning", "03_matrices_learning\03_matrices_learning.vcxproj", "{F21F500B-21C6-429F-942F-64E153EFC8EB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -85,6 +87,14 @@ Global
 		{B5C87CAA-D391-47E6-B2E2-E7C5E15F0B71}.Release|Win32.Build.0 = Release|Win32
 		{B5C87CAA-D391-47E6-B2E2-E7C5E15F0B71}.Release|x64.ActiveCfg = Release|x64
 		{B5C87CAA-D391-47E6-B2E2-E7C5E15F0B71}.Release|x64.Build.0 = Release|x64
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Debug|Win32.Build.0 = Debug|Win32
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Debug|x64.ActiveCfg = Debug|x64
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Debug|x64.Build.0 = Debug|x64
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Release|Win32.ActiveCfg = Release|Win32
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Release|Win32.Build.0 = Release|Win32
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Release|x64.ActiveCfg = Release|x64
+		{F21F500B-21C6-429F-942F-64E153EFC8EB}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
